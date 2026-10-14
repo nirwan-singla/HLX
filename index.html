@@ -1,44 +1,97 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="icon" type="image/x-icon" href="logo.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <title>HLX</title>
 </head>
 <body>
     <div class="heading">
         <div class="navigation">
+
             <span class="logo">
-            <img src="1.png" alt="HLX" width="50px">
+                <img src="1.png" alt="HLX" width="50px">
             </span>
+
             <div class="language-container">
-            <i class="fa-solid fa-language"></i><br>
-            <select class="lang" id="language" onchange="showChoice()">
-            <option class ="op" value="english">English</option>
-            <option class ="op" value="hindi">Hindi</option>
-            <option class ="op" value="punjabi">Punjabi</option>
-        </select> &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-language"></i><br>
+
+                <select class="lang" id="language" onchange="showChoice()">
+                    <option class="op" value="english">English</option>
+                    <option class="op" value="hindi">Hindi</option>
+                    <option class="op" value="punjabi">Punjabi</option>
+                </select> &nbsp;&nbsp;&nbsp;&nbsp;
             </div>
-        <div class="search-bar">
-            <input type="text" placeholder="🔎               Search Your Item" class="text-box">
+
+            <div class="search-bar">
+                <input
+                    type="text"
+                    placeholder="🔎               Search Your Item"
+                    class="text-box"
+                >
             </div>
+
             <div class="kart">
-              <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
             </div>
+
             <div class="sell">
                 <h4 class="sel1">+ SELL</h4>
             </div>
+
             <div class="user">
                 <i class="fas fa-user"></i>
             </div>
+
         </div>
 
-        </span>
+<!-- Categories navigation bar -->
+<div class="categories-bar">
+
+    <!-- Dropdown for all categories -->
+    <div class="category-menu">
+
+        <button class="category-trigger" type="button">
+            <i class="fa-solid fa-bars"></i>
+            All Categories
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="category-dropdown">
+            <a href="#books">Books & Notes</a>
+            <a href="#calculators">Calculators</a>
+            <a href="#electronics">Electronics & Gadgets</a>
+            <a href="#clothing">Clothing & Accessories</a>
+            <a href="#lab">Lab Equipment</a>
+            <a href="#sports">Sports Equipment</a>
+            <a href="#room">Room Essentials</a>
+            <a href="#other">Other Items</a>
+        </div>
+
     </div>
+
+    <!-- Popular categories -->
+    <div class="popular-categories">
+        <a href="#books">Books & Notes</a>
+        <a href="#calculators">Calculators</a>
+        <a href="#electronics">Electronics</a>
+        <a href="#lab">Lab Equipment</a>
+        <a href="#room">Room Essentials</a>
+        <a href="#sports">Sports</a>
+        <a href="#clothing">Clothing</a>
+    </div>
+
+</div>
+
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
