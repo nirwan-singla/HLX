@@ -380,46 +380,153 @@ body {
 
 /* headphones */
 
-.item-container{
-     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: flex-start;
-    flex-wrap: wrap;
+
+/* Product grid */
+.item-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+
+    width: 100%;
+    max-width: none;
+    margin: 30px 0;
+    padding: 0 24px;
+
+    align-items: stretch;
 }
 
-  #headphone{
-    border:2px solid black;
-    box-sizing: border-box;
-    transform: translateX(100px);
-   }
+/* Individual headphone card */
+.headphone-card {
+    width: 100%;
+    min-width: 0;
 
-.photo img{
-    height: 250px;
-    width:350px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: box-shadow 0.2s ease;
 }
 
+.headphone-card:hover {
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Product image */
+.photo {
+    width: 100%;
+    height: 230px;
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Product information */
 .details {
-    padding: 5px;
-    margin-top: 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .details h3 {
-    margin-top: 5px;
-    margin-bottom: 8px;
+    margin: 0 0 10px;
+    font-size: 18px;
 }
 
 .details .prod-price {
-    margin-top: 5px;
-    margin-bottom: 0px;
+    margin: 0 0 10px;
+    color: forestgreen;
+    font-size: 17px;
 }
 
 .details .prod-spec {
-    margin-top: 3px;
-    margin-bottom: 8px;
+    margin: 0 0 12px;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.5;
 }
- 
 
+.more-info {
+    margin-bottom: 16px;
+    font-size: 14px;
+}
 
-/* dandia */
+.more-info p {
+    margin: 8px 0;
+}
+
+/* Product buttons */
+.product-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.product-buttons button {
+    flex: 1 1 110px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.buy-btn {
+    background-color: forestgreen;
+    color: white;
+}
+
+.buy-btn:hover {
+    background-color: #14532d;
+}
+
+.cart-btn {
+    background-color: #f0f2f0;
+    color: #222222;
+}
+
+.cart-btn:hover {
+    background-color: #e0e5e0;
+}
+
+/* Tablets: two products per row */
+@media (max-width: 800px) {
+    .item-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        padding: 0 12px;
+    }
+
+    .photo {
+        height: 200px;
+    }
+}
+
+/* Mobile: one product per row */
+@media (max-width: 500px) {
+    .item-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        padding: 0 16px;
+    }
+
+    .photo {
+        height: 240px;
+    }
+}
+
 
