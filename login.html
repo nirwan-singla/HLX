@@ -1,17 +1,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HLX-Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<title>HLX | Login</title>
 </head>
 <body>
-    <center>
-        <h2>Login Yourself, if you already Sign Up</h2><br><br><br><br>
-        Username : <input type="text" placeholder="username"><br><br>
-        Password : <input type="password" placeholder="password">
-        <a href="index.html" style="text-decoration: none;">
-        <h5><button>LOGIN</button></h5>
+    
+<body class="login-page">
+
+    <main class="login-wrapper">
+
+        <a href="index.html" class="login-brand">
+            <img src="pictures/1.png" alt="HLX Logo">
+            <span>
+                <strong>HLX</strong>
+                <small>HOSTEL LENDING EXCHANGE</small>
+            </span>
         </a>
-    </center>
+
+        <section class="login-card">
+
+            <div class="login-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <h1>Welcome back!</h1>
+
+            <p class="login-subtitle">
+                Log in to your campus marketplace
+            </p>
+
+            <form action="#" method="post" class="login-form">
+
+                <div class="login-field">
+                    <label for="username">Username</label>
+
+                    <div class="login-input">
+                        <i class="fa-regular fa-user"></i>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Enter your username"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="login-field">
+                    <label for="password">Password</label>
+
+                    <div class="login-input">
+                        <i class="fa-solid fa-lock"></i>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="login-options">
+                    <label class="remember-option">
+                        <input type="checkbox" name="remember">
+                        Remember me
+                    </label>
+
+                    <a href="forgot-password.html">
+                        Forgot password?
+                    </a>
+                </div>
+
+                <button type="submit" class="login-submit">
+                    LOGIN <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+            <p class="signup-prompt">
+                New to HLX?
+                <a href="signup.html">Create an account</a>
+            </p>
+
+            <div class="login-footer">
+                Your campus. Your community. Your marketplace.
+            </div>
+
+        </section>
+
+        <a href="index.html" class="back-home">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to marketplace
+        </a>
+
+    </main>
+
+</body>
+
 </body>
 </html>
